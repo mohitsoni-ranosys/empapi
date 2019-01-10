@@ -1,0 +1,10 @@
+<h2><u>Employee Detail</u></h2>
+
+<p><em><strong>Name: </strong>{{employee.first_name}} {{employee.last_name}}</em></p>
+<p><em><strong>Position: </strong>{{employee.get_position_display}}</em></p>
+<p><em><strong>Technology: </strong>{{employee.get_tech_display}}</em></P>
+<p><em><strong>Projects: 
+    {% for project in employee.on_projects.all %}
+        <p style="margin-left: 40px"> {{ forloop.counter }}. {{ project.project_name }}</p>
+    {% endfor %}
+</strong></em></P>

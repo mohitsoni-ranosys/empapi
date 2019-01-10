@@ -1,0 +1,4 @@
+<h3>Employee List</h3>
+{% for employee in employee_list %}
+    <p>{{ forloop.counter }}. <a href="{{ employee.get_absolute_url }}">{{ employee.first_name }} {{ employee.last_name }}</a></p>
+{% endfor %}
